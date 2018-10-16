@@ -165,4 +165,76 @@ table {
   z-index: -1;
 }
 
+/* line 162, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+p {
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: lawngreen;
+  }
+  50% {
+    color: deeppink;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+@-moz-keyframes color-change {
+  0% {
+    color: lawngreen;
+  }
+  50% {
+    color: deeppink;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+@-ms-keyframes color-change {
+  /* line 191, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+  p 0% {
+    color: lawngreen;
+  }
+  /* line 194, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+  p 50% {
+    color: deeppink;
+  }
+  /* line 197, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+  p 100% {
+    color: orange;
+  }
+}
+
+@-o-keyframes color-change {
+  0% {
+    color: lawngreen;
+  }
+  50% {
+    color: deeppink;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: lawngreen;
+  }
+  50% {
+    color: deeppink;
+  }
+  100% {
+    color: orange;
+  }
+}
+
 /*# sourceMappingURL=../css/index.map */
