@@ -140,101 +140,54 @@ table {
   border-spacing: 0;
 }
 
-/* line 139, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-.cenas {
-  text-align: center;
-  font-size: 120px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #ff0000;
-  font-style: italic;
+/* line 138, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+body {
+  background: black;
 }
 
-/* line 152, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-#confetti {
-  background: #000;
-  height: 100%;
-  left: 0px;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: -1;
+/* line 142, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas {
+  font-family: 'K2D', sans-serif;
+  color: white;
+  padding: 10%;
+}
+
+/* line 146, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas img {
+  width: 50%;
+  box-shadow: 0 0 400px rgba(6, 201, 205, 0.5);
+  vertical-align: middle;
+}
+
+/* line 151, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas .text {
+  width: 40%;
+  display: inline-block;
+  padding: 5%;
+  vertical-align: middle;
+}
+
+/* line 156, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas .text p {
+  margin-bottom: 20px;
+}
+
+/* line 158, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas .text p.date {
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 /* line 162, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-p {
-  -webkit-animation: color-change 1s infinite;
-  -moz-animation: color-change 1s infinite;
-  -o-animation: color-change 1s infinite;
-  -ms-animation: color-change 1s infinite;
-  animation: color-change 1s infinite;
+.cenas .text p.title {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-@-webkit-keyframes color-change {
-  0% {
-    color: lawngreen;
-  }
-  50% {
-    color: deeppink;
-  }
-  100% {
-    color: orange;
-  }
-}
-
-@-moz-keyframes color-change {
-  0% {
-    color: lawngreen;
-  }
-  50% {
-    color: deeppink;
-  }
-  100% {
-    color: orange;
-  }
-}
-
-@-ms-keyframes color-change {
-  /* line 191, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-  p 0% {
-    color: lawngreen;
-  }
-  /* line 194, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-  p 50% {
-    color: deeppink;
-  }
-  /* line 197, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
-  p 100% {
-    color: orange;
-  }
-}
-
-@-o-keyframes color-change {
-  0% {
-    color: lawngreen;
-  }
-  50% {
-    color: deeppink;
-  }
-  100% {
-    color: orange;
-  }
-}
-
-@keyframes color-change {
-  0% {
-    color: lawngreen;
-  }
-  50% {
-    color: deeppink;
-  }
-  100% {
-    color: orange;
-  }
+/* line 166, C:/Users/luis_/Desktop/github/luisraferreira.github.io/scss/index.scss */
+.cenas .text p.description {
+  font-weight: normal;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=../css/index.map */

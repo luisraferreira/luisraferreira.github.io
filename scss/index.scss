@@ -135,89 +135,39 @@ table {
     border-spacing: 0;
 }
 
+body {
+    background: black;
+}
 
 .cenas {
-    text-align: center;
-    font-size: 120px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #ff0000;
-    font-style: italic;
-}
+    font-family: 'K2D', sans-serif;
+    color: white;
+    padding: 10%;
+    img {
+        width: 50%;
+        box-shadow: 0 0 400px rgba(6, 201, 205, 0.5);
+        vertical-align: middle;
+    }
+    .text {
+        width: 40%;
+        display: inline-block;
+        padding: 5%;
+        vertical-align: middle;
+        p {
+            margin-bottom: 20px;
+            &.date {
+                font-weight: bolder;
+                font-size: 24px;
+            }
+            &.title {
+                font-weight: bold;
+                font-size: 20px;
+            }
+            &.description {
+                font-weight: normal;
+                font-size: 18px;
+            }
+        }
+    }
 
-#confetti {
-    background: #000;
-    height: 100%;
-    left: 0px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: -1;
-}
-
-p {
-    -webkit-animation: color-change 1s infinite;
-    -moz-animation: color-change 1s infinite;
-    -o-animation: color-change 1s infinite;
-    -ms-animation: color-change 1s infinite;
-    animation: color-change 1s infinite;
-    @-webkit-keyframes color-change {
-        0% {
-            color: lawngreen;
-        }
-        50% {
-            color: deeppink;
-        }
-        100% {
-            color: orange;
-        }
-    }
-    @-moz-keyframes color-change {
-        0% {
-            color: lawngreen;
-        }
-        50% {
-            color: deeppink;
-        }
-        100% {
-            color: orange;
-        }
-    }
-    @-ms-keyframes color-change {
-        0% {
-            color: lawngreen;
-        }
-        50% {
-            color: deeppink;
-        }
-        100% {
-            color: orange;
-        }
-    }
-    @-o-keyframes color-change {
-        0% {
-            color: lawngreen;
-        }
-        50% {
-            color: deeppink;
-        }
-        100% {
-            color: orange;
-        }
-    }
-    @keyframes color-change {
-        0% {
-            color: lawngreen;
-        }
-        50% {
-            color: deeppink;
-        }
-        100% {
-            color: orange;
-        }
-    }
 }
