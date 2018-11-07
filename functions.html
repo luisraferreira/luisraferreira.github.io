@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<style>
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 24px;
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Functions</h1>
+
+        <p>function comer (var1, var2 ....) { }</p>
+        <p>comer();</p>
+
+        <h2>Exercicio</h2>
+        <p>Fazer uma função que tenha como parâmetros "sopa", "prato principal", "sobremesa" e fazer log na consola de 3 combinações diferentes.</p>
+
+
+        <h2>Diferença entre variaveis globais e locais:</h2>
+        <p>Uma variavel local é uma variavel que é definida dentro de uma função e só poderá ser acedida por outra função se for passada como parâmetro.</p>
+        <p>ex: function comer () { var comida = "paparoca"; beber(paparoca);}</p>
+        <p>function beber (paparoca) { console.log(paparoca)}</p>
+    </div>
+</body>
+
+</html>
+<script>
+    //Exemplo 1
+    function comer(comida, bebida) {
+// var cenas = "olá!"; // cenasGiras(cenas);
+        console.log(comida, bebida);
+    }    
+    comer("batatas", "agua");
+      
+    //Exemplo 2 
+    // function favorite(animal, cor) { // console.log("O meu animal preferido é o", animal, "A minha cor preferida é a", cor); // } // favorite("cão", "laranja");
+    
+    //Exemplo 3 // function restaurante(sopa, pratoPrincipal, sobremesa) { // console.log(sopa, pratoPrincipal, sobremesa); // } // restaurante("espinafres", "bacalhau com natas", "baba de camelo"); // restaurante("cenas", "bacalhau com grao", "bolo de bolacha"); // restaurante("canja", "francesinha", "salada de fruta");
+    
+    //Exemplo 4
+// function cenasGiras(cenas) { // console.log(cenas); // }
+
+</script>
