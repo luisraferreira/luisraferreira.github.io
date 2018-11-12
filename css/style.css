@@ -85,7 +85,7 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font-family: 'KoHo', sans-serif;
     vertical-align: baseline;
 }
 
@@ -144,11 +144,16 @@ table {
     margin-bottom: 40px;
     color: orange;
     text-transform: uppercase;
-    font-family: 'KoHo', sans-serif;
 }
 
 .content button {
     display: block;
     margin: 20px auto;
+}
 
+.task:after {
+    content: 'x';
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
 }
