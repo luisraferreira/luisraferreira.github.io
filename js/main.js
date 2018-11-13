@@ -36,8 +36,3 @@ function addTask() {
     li.appendChild(span);
 
 }
-
-
-function deleteTaks() {
-
-}
