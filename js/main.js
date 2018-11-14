@@ -14,48 +14,59 @@ document.querySelector('.inputTask').addEventListener('keypress', function (e) {
 
 function addTask() {
     var inputValue = document.querySelector('.inputTask').value;
-    var colorSelected = document.querySelector('.checkSelect');
+    var colorSelected = document.querySelector('.checkSelect:checked');
     var tasksContainer = document.querySelector('.ulTasks');
-
-    var template = `
-        <article class="pokemon">
-            <h3>${inputValue}</h3>
-            <p>The Pokemon ${inputValue} has a base experience of</p>
-        </article>
-    `;
 
     //        var li = document.createElement("li");
     //        var text = document.createTextNode(inputValue);
     //        var span = document.createElement('span');
     //        var icon = document.createTextNode("\u00D7");
 
-    if (inputValue === "") {
-        alert("Por favor preencha o campo");
+    if (inputValue === "" || colorSelected == null) {
+        alert("Por favor preencha o campo e selecione uma cor!");
     } else {
+        var color = colorSelected.dataset.color;
+        var template = `
+        <li class="task" style="color:${color}">
+            <p>${inputValue} <span class="close">\u00D7</span> <span class="edit">Edit</span></p>
+        </li>`;
         tasksContainer.insertAdjacentHTML('beforeend', template);
-    }
 
-    document.querySelector('.inputTask').value = "";
-//    span.className = "close";
-//    span.appendChild(icon);
-//    li.append(span);
+        colorSelected.checked = false
+        document.querySelector('.inputTask').value = "";
+
+    }
+    //    span.className = "close";
+    //    span.appendChild(icon);
+    //    li.append(span);
 
     //delete task
     var closeBtn = document.querySelectorAll('.close');
-    //    closeBtn[i].addEventListener('click', deleteTask);
     var ul = document.querySelector('.ulTasks');
     var len = ul.children.length;
     for (var i = 0; i < len; i++) {
-        //        (function (index) {
-        //            closeBtn[i].onclick = function (el) {
-        //                deleteTask(el);
-        //            }
-        //        })(i);
         closeBtn[i].addEventListener('click', deleteTask);
     }
+
+    //edit task
+    var editBtn = document.querySelectorAll('.edit');
+    for (var j = 0; j < len; j++) {
+        editBtn[j].addEventListener('click', editTask);
+    }
+
 }
 
 
 var deleteTask = function (el) {
+    el.target.parentElement.remove();
+}
+
+var editTask = function (el) {
+    var parent = el.target.parentElement;
+    var text = parent.innerText.split('\u00D7')[0];
+    var color = parent.parentElement.style.color;
+
+    document.querySelector(`.checkSelect[data-color=${color}]`).checked = true;
+    document.querySelector('.inputTask').value = text;
     el.target.parentElement.remove();
 }
