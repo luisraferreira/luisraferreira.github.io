@@ -168,3 +168,7 @@ table {
 span {
     cursor: pointer;
 }
+
+.cenas {
+    font-size: 40px !important;
+}
