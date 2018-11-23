@@ -169,6 +169,10 @@ span {
     cursor: pointer;
 }
 
+.content button.deleteAll {
+    display: none;
+}
+
 .cenas {
     font-size: 40px !important;
 }

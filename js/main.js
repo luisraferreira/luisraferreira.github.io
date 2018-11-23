@@ -64,7 +64,16 @@ function addTask() {
 
 }
 
-
 var deleteTask = function (el) {
+    el.target.parentElement.remove();
+}
+
+var editTask = function (el) {
+    var parent = el.target.parentElement;
+    var text = parent.innerText.split('\u00D7')[0];
+    var color = parent.parentElement.style.color;
+
+    document.querySelector(`.checkSelect[data-color=${color}]`).checked = true;
+    document.querySelector('.inputTask').value = text;
     el.target.parentElement.remove();
 }
