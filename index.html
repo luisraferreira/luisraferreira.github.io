@@ -29,6 +29,24 @@
 
         <button class="deleteAll">Apagar Tudo</button>
 
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" class="inputTaskEdit">
+                <div class="checkboxes">
+                    <input type="radio" name="color" class="checkSelectEdit" data-color="red"> Vermelho
+                    <input type="radio" name="color" class="checkSelectEdit" data-color="orange"> Laranja
+                    <input type="radio" name="color" class="checkSelectEdit" data-color="green"> Verde
+                    <input type="radio" name="color" class="checkSelectEdit" data-color="blue"> Azul
+                    <input type="radio" name="color" class="checkSelectEdit" data-color="black"> Sem cor
+                </div>
+                <button class="saveTask">Guardar</button>
+            </div>
+        </div>
+
+
     </div>
     <script src="js/main2.js"></script>
 </body>
