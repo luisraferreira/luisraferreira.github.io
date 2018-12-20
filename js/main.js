@@ -1,27 +1,33 @@
-(function ($) {
-    "use strict";
+var btnTop = document.querySelector('.btn-back-to-top');
+var menuHeader = document.querySelector('.container-menu-header');
 
-    /*[ Load page ]
-    ===========================================================*/
-    $(".animsition").animsition({
-        inClass: 'fade-in',
-        outClass: 'fade-out',
-        inDuration: 1500,
-        outDuration: 800,
-        linkElement: '.animsition-link',
-        loading: true,
-        loadingParentElement: 'html',
-        loadingClass: 'animsition-loading-1',
-        loadingInner: '<div data-loader="ball-scale"></div>',
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: ['animation-duration', '-webkit-animation-duration'],
-        overlay: false,
-        overlayClass: 'animsition-overlay-slide',
-        overlayParentElement: 'html',
-        transition: function (url) {
-            window.location.href = url;
-        }
+btnTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
     });
-})(jQuery);
+});
+
+window.onscroll = function () {
+    var windowHeight = window.innerHeight;
+
+    if (window.pageYOffset > windowHeight) {
+        btnTop.style.display = "flex"
+    } else {
+        btnTop.style.display = "none"
+    }
+
+    stickyMenu();
+};
+
+function stickyMenu() {
+    var headerHeight = menuHeader.offsetHeight;
+
+    if (window.pageYOffset > headerHeight) {
+        menuHeader.classList.add('sticky');
+    } else {
+        menuHeader.classList.remove('sticky');
+    }
+
+}
